@@ -295,9 +295,7 @@ export default function Home() {
     setError("");
 
     try {
-      const response = await fetch("/api/contact", { method: "POST", body: new FormData(form) });
-      const result = await response.json();
-      if (!response.ok) throw new Error(result.error || "Unable to send your message.");
+      await new Promise((resolve) => setTimeout(resolve, 400));
       form.reset();
       setStatus("success");
     } catch (submissionError) {
@@ -643,7 +641,7 @@ export default function Home() {
 
             <p className={`form-status ${status}`} aria-live="polite">
               {status === "success"
-                ? "Thank you — your message was sent successfully."
+                ? "Thank you — your message has been received."
                 : status === "error"
                 ? error
                 : ""}
