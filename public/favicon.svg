@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <style>
+    .bg{fill:#eff6ff}.shield{fill:#2563eb}.check{fill:none;stroke:#fff;stroke-width:6;stroke-linecap:round;stroke-linejoin:round}.bug{fill:#16a34a}
+    @media (prefers-color-scheme: dark){.bg{fill:#0f172a}.shield{fill:#60a5fa}.bug{fill:#4ade80}}
+  </style>
+  <rect class="bg" width="64" height="64" rx="14"/>
+  <path class="shield" d="M32 8 51 15v14c0 13-8 22-19 27C21 51 13 42 13 29V15l19-7Z"/>
+  <path class="check" d="m22 31 7 7 14-15"/>
+  <circle class="bug" cx="49" cy="49" r="9"/>
+  <path d="M49 44v10M44 49h10M45.5 45.5l7 7M52.5 45.5l-7 7" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/>
+</svg>

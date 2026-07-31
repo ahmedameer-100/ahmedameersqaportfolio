@@ -1,0 +1,24 @@
+{
+  "name": "qa-synthesis-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@types/nodemailer": "^8.0.1",
+    "next": "^16.2.11",
+    "nodemailer": "^9.0.3",
+    "react": "19.1.0",
+    "react-dom": "19.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.1",
+    "@types/react": "^19.2.17",
+    "playwright": "^1.61.1",
+    "typescript": "^5.8.3"
+  }
+}

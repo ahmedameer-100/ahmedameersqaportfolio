@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      width: 1920px; height: 1080px; overflow: hidden;
+      font-family: "Segoe UI", system-ui, sans-serif;
+      background: #12141a;
+      color: #e8eaed;
+    }
+    .topbar {
+      height: 56px; background: #1c1f28; border-bottom: 1px solid #333842;
+      display: flex; align-items: center; padding: 0 32px; gap: 24px;
+    }
+    .logo { font-weight: 700; font-size: 18px; color: #4edea3; letter-spacing: 0.06em; }
+    .nav { display: flex; gap: 8px; margin-left: 40px; }
+    .nav span { padding: 8px 16px; font-size: 13px; color: #8b95a5; border-radius: 6px; }
+    .nav span.active { background: #252932; color: #4edea3; }
+    .content { display: grid; grid-template-columns: 260px 1fr; height: calc(100% - 56px); }
+    .sidebar { background: #181b22; border-right: 1px solid #333842; padding: 24px 16px; }
+    .sidebar div { padding: 10px 14px; font-size: 13px; color: #6b7785; margin-bottom: 4px; border-radius: 6px; }
+    .sidebar div.on { background: #22262f; color: #adc6ff; }
+    .main { padding: 32px; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .panel { background: #1c1f28; border: 1px solid #333842; border-radius: 10px; padding: 24px; }
+    .panel h3 { font-size: 14px; margin-bottom: 18px; color: #c5cdd8; }
+    .metric { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid #252932; font-size: 13px; }
+    .metric span { color: #8b95a5; }
+    .metric b { color: #4edea3; }
+    .chart { height: 180px; background: linear-gradient(180deg, #4edea315 0%, transparent 100%); border-radius: 8px; position: relative; margin-top: 12px; }
+    .chart::after { content: ""; position: absolute; bottom: 20px; left: 20px; right: 20px; height: 2px; background: #4edea3; box-shadow: 0 -40px 0 #4edea3, 0 -80px 0 #adc6ff, 0 -60px 0 #4edea380; opacity: 0.6; }
+    .list-item { display: flex; justify-content: space-between; align-items: center; padding: 14px 0; border-bottom: 1px solid #252932; font-size: 13px; }
+    .dot { width: 8px; height: 8px; border-radius: 50%; background: #4edea3; margin-right: 10px; display: inline-block; }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="logo">CRCLS</div>
+    <div class="nav">
+      <span class="active">Workspace</span><span>Projects</span><span>Analytics</span><span>Team</span>
+    </div>
+  </div>
+  <div class="content">
+    <div class="sidebar">
+      <div class="on">Dashboard</div><div>Workflows</div><div>Integrations</div><div>Audit Log</div><div>Admin</div>
+    </div>
+    <div class="main">
+      <div class="panel">
+        <h3>System Health</h3>
+        <div class="metric"><span>API Uptime</span><b>99.97%</b></div>
+        <div class="metric"><span>Active Sessions</span><b>1,842</b></div>
+        <div class="metric"><span>Queue Processing</span><b>Normal</b></div>
+        <div class="chart"></div>
+      </div>
+      <div class="panel">
+        <h3>Recent Deployments</h3>
+        <div class="list-item"><span><span class="dot"></span>Release v2.4.1</span><span style="color:#4edea3">Stable</span></div>
+        <div class="list-item"><span><span class="dot"></span>Release v2.4.0</span><span style="color:#adc6ff">Verified</span></div>
+        <div class="list-item"><span><span class="dot"></span>Hotfix v2.3.9</span><span style="color:#4edea3">Stable</span></div>
+        <div class="list-item"><span><span class="dot"></span>Release v2.3.8</span><span style="color:#8b95a5">Archived</span></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
