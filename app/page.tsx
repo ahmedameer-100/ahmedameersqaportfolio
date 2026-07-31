@@ -347,8 +347,8 @@ export default function Home() {
         </nav>
   
         <div className="sidebar-bottom">
-          <a className="button secondary sidebar-resume-btn" href={resumeUrl} download="Ahmed-Ameer-SQA-Engineer-CV.pdf">
-            Download Resume
+          <a className="button primary sidebar-resume-btn" href={resumeUrl} download="Ahmed-Ameer-SQA-Engineer-CV.pdf">
+            Download Resume <span aria-hidden="true">↓</span>
           </a>
           <div className="sidebar-footer">
             <p className="eyebrow">AVAILABLE FOR</p>
