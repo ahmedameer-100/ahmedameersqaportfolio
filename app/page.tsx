@@ -420,9 +420,6 @@ export default function Home() {
             </div>
 
             <div className="actions">
-              <a className="button primary" href={githubUrl} target="_blank" rel="noopener noreferrer">
-                View My Work <span aria-hidden="true">→</span>
-              </a>
               <button className="button primary" type="button" onClick={() => setContactOpen(true)}>
                 Contact Me <span aria-hidden="true">→</span>
               </button>
