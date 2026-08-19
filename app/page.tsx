@@ -7,28 +7,20 @@ import { SocialIcon } from "./components/SocialIcon";
 import { ThemeToggle } from "./components/ThemeToggle";
 
 const linkedInUrl = "https://www.linkedin.com/in/ahmed-ameer-/";
-const githubUrl = "https://github.com/ahmedameer-100?tab=repositories";
 const resumeUrl = "/ahmed-ameer-sqa-engineer-cv.pdf";
 
 const manualExpertise = [
   "Functional Testing",
+  "Regression Testing",
   "Smoke Testing",
   "Sanity Testing",
-  "Regression Testing",
+  "Integration Testing",
+  "System Testing",
+  "UAT",
   "Exploratory Testing",
   "UI Testing",
-  "UI/UX Testing",
-  "Compatibility Testing",
   "Cross Browser Testing",
-  "Cross Platform Testing",
-  "Load Testing",
-  "Performance Testing",
-  "API Testing",
-  "Database Testing",
-  "User Acceptance Testing (UAT)",
-  "Accessibility Testing",
-  "Security Testing (Basic)",
-  "Requirement Validation",
+  "SDLC & STLC",
 ];
 
 const automationExpertise = [
@@ -43,13 +35,14 @@ const automationExpertise = [
 ];
 
 const skillCategories = [
-  { title: "Manual Testing", tone: "blue", items: ["Jira", "Azure DevOps", "TestRail", "Postman", "Swagger", "SQL", "MySQL"] },
+  { title: "Manual Testing", tone: "blue", items: ["Functional Testing", "Regression Testing", "Smoke Testing", "Sanity Testing", "Integration Testing", "System Testing", "UAT", "Exploratory Testing", "UI Testing", "Cross Browser Testing"] },
   { title: "Automation", tone: "green", items: ["Selenium", "Cypress", "Playwright", "Appium", "TestNG", "JUnit", "Maven", "Gradle"] },
-  { title: "Programming Languages", tone: "blue", items: ["Java", "JavaScript", "Python"] },
   { title: "Version Control", tone: "green", items: ["Git", "GitHub"] },
   { title: "CI/CD", tone: "blue", items: ["Jenkins", "GitHub Actions"] },
-  { title: "API Testing", tone: "green", items: ["Postman", "REST Assured"] },
-  { title: "Performance", tone: "blue", items: ["JMeter"] },
+  { title: "API Testing", tone: "green", items: ["Postman", "Swagger"] },
+  { title: "Database Testing", tone: "blue", items: ["DBeaver", "MongoDB"] },
+  { title: "Project Boards", tone: "green", items: ["Jira", "GitHub", "Trello", "Asana", "Bugzilla"] },
+  { title: "Load Testing", tone: "blue", items: ["Load Testing", "Stress Testing"] },
 ];
 
 const experienceEntries = [
@@ -237,6 +230,12 @@ const certifications = [
     url: "https://www.linkedin.com/learning/certificates/7982bab9e0942f0c585ab215a3a90e4ae69fc5b3f80b61bb85a32cee4ec2ae61?lipi=urn%3Ali%3Apage%3Ad_flagship3_detail_base%3BSJuaXjKVRc%2BwNDFjvwN%2BJQ%3D%3D",
     linkedInLearning: true,
   },
+  {
+    title: "LinkedIn Learning Certificate — course title unavailable",
+    issuer: "LinkedIn Learning",
+    url: "https://www.linkedin.com/learning/certificates/5c71ff32be63d0422da092dd9fd2929efdbeb4762a0a353884dee2720d039617?trk=share_certificate",
+    linkedInLearning: true,
+  },
 ];
 
 function LinkedInLearningIcon() {
@@ -357,10 +356,6 @@ export default function Home() {
               <a href={linkedInUrl} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" className="social-btn" data-tooltip="View LinkedIn Profile">
                 <SocialIcon type="linkedin" />
                 <span>LinkedIn</span>
-              </a>
-              <a href={githubUrl} target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" className="social-btn" data-tooltip="View GitHub Profile">
-                <SocialIcon type="github" />
-                <span>GitHub</span>
               </a>
             </div>
           </div>
@@ -667,9 +662,6 @@ export default function Home() {
             <a href="mailto:ahmedameer7337@gmail.com">Email</a>
             <a href={linkedInUrl} target="_blank" rel="noopener noreferrer">
               LinkedIn
-            </a>
-            <a href={githubUrl} target="_blank" rel="noopener noreferrer">
-              GitHub
             </a>
             <a href="#about">Portfolio Top</a>
           </div>
