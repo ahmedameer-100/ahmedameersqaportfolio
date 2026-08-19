@@ -27,8 +27,7 @@ const automationExpertise = [
   "Selenium WebDriver",
   "Cypress Framework",
   "Playwright Automation",
-  "Java & TestNG / JUnit",
-  "Maven & Gradle Builds",
+  "Python & Pytest",
   "Page Object Model (POM)",
   "Data-Driven Frameworks",
   "CI/CD Integration (Jenkins/Actions)",
@@ -36,13 +35,14 @@ const automationExpertise = [
 
 const skillCategories = [
   { title: "Manual Testing", tone: "blue", items: ["Functional Testing", "Regression Testing", "Smoke Testing", "Sanity Testing", "Integration Testing", "System Testing", "UAT", "Exploratory Testing", "UI Testing", "Cross Browser Testing"] },
-  { title: "Automation", tone: "green", items: ["Selenium", "Cypress", "Playwright", "Appium", "TestNG", "JUnit", "Maven", "Gradle"] },
+  { title: "Automation Testing", tone: "green", items: ["Python", "Pytest", "Selenium", "Cypress", "Playwright"] },
   { title: "Version Control", tone: "green", items: ["Git", "GitHub"] },
-  { title: "CI/CD", tone: "blue", items: ["Jenkins", "GitHub Actions"] },
+  { title: "CI/CD", tone: "blue", items: ["Jenkins", "GitHub Actions", "Docker"] },
   { title: "API Testing", tone: "green", items: ["Postman", "Swagger"] },
   { title: "Database Testing", tone: "blue", items: ["DBeaver", "MongoDB"] },
   { title: "Project Boards", tone: "green", items: ["Jira", "GitHub", "Trello", "Asana", "Bugzilla"] },
-  { title: "Load Testing", tone: "blue", items: ["Load Testing", "Stress Testing"] },
+  { title: "Load Testing", tone: "blue", description: "Load, stress, performance, and scalability testing to identify system bottlenecks.", items: ["Apache JMeter", "k6", "Locust", "Gatling"] },
+  { title: "AI Quality Engineering", tone: "green", description: "AI-assisted analysis and automation for continuous quality feedback.", items: ["AI Assisted Testing", "Intelligent Test Data", "Defect Prediction"] },
 ];
 
 const experienceEntries = [
@@ -117,7 +117,7 @@ const projects: Project[] = [
     image: "/projects/cargo-id-secure.jpg",
     url: "https://app.cargoidsecure.com/",
     manualQa: ["Functional Testing", "Role-Based Access", "API Testing", "Database Validation", "Regression Testing"],
-    autoQa: ["Selenium WebDriver", "TestNG", "Maven", "API Automation"],
+    autoQa: ["Selenium WebDriver", "Pytest", "API Automation"],
   },
   {
     name: "AllZone Technologies",
@@ -203,13 +203,13 @@ const projects: Project[] = [
     name: "HRMS",
     client: "AllZone Technologies",
     role: "SQA Engineer",
-    tech: "Selenium, Cypress, Postman, JMeter",
+    tech: "Selenium, Cypress, Postman, Apache JMeter",
     description:
       "Validated internal human-resource management workflows including employee onboarding, attendance, leave management, and payroll modules. Developed automation coverage for recurring regression scenarios and performed API testing for HR service integrations. Conducted performance validation on high-traffic dashboard endpoints.",
     image: "/projects/hrms.jpg",
     url: "https://azt-hrms-dev.azurewebsites.net/",
     manualQa: ["HR Workflow Validation", "API Testing", "Database Validation", "UAT Support"],
-    autoQa: ["Selenium", "Cypress", "JMeter Performance Testing"],
+    autoQa: ["Selenium", "Cypress", "Apache JMeter Performance Testing"],
   },
 ];
 
@@ -371,12 +371,23 @@ export default function Home() {
             <h1>
               Bulletproof <em>Code Quality.</em>
               <br />
-              Automated Testing at Scale.
+              Automation Testing at Scale.
             </h1>
 
             <p className="">
-              Software Quality Assurance Engineer with 3+ years of experience delivering high-reliability web and enterprise applications. Specialized in comprehensive manual testing including functional, regression, smoke, sanity, UI/UX, cross-browser, cross-platform, load, performance, API, database, accessibility, and security testing. Expert in automation frameworks using Selenium, Cypress, Playwright, Java, TestNG, Maven, and CI/CD integration. Proven track record in Agile/Scrum collaboration, defect lifecycle management, and requirement validation. Passionate about software quality and continuous learning, with a strong ability to improve release confidence through systematic quality engineering practices.
+              Software Quality Assurance Engineer with 3+ years of experience delivering high-reliability web and enterprise applications. Quality Engineering connects the complete SDLC, from requirements and planning through development, testing, deployment, and maintenance, with quality practices built into every stage. It works alongside the STLC to prevent defects early, validate risk continuously, and improve software quality instead of treating testing as a final step. Specialized in manual testing and Automation Testing with Selenium, Cypress, Playwright, Python, Pytest, API validation, performance engineering, CI/CD integration, defect lifecycle management, and requirement validation.
             </p>
+
+            <div className="quality-principles panel">
+              <p className="eyebrow accent">// SDLC + STLC</p>
+              <h2>Quality Engineering Across the Delivery Lifecycle</h2>
+              <p>
+                SDLC defines how software moves from requirements and planning to development, testing, deployment, and maintenance. STLC provides the testing activities within that journey: requirement analysis, test planning, test design, environment preparation, execution, defect resolution, reporting, and closure. Together, they make quality a shared responsibility from the first requirement through production feedback and continuous improvement.
+              </p>
+              <p>
+                Quality Engineering prevents defects early through risk-based planning, automation, observability, and continuous validation. By integrating testing into every SDLC stage, teams gain faster feedback, stronger release confidence, and more reliable software.
+              </p>
+            </div>
 
             <div className="hero-expertise">
               <div className="hero-expertise-card panel">
@@ -404,7 +415,7 @@ export default function Home() {
                   <h3 className="group-title green">Automation Testing</h3>
                 </div>
                 <p className="hero-expertise-desc">
-                  Focus on building scalable and maintainable automation frameworks using Selenium, Cypress, Playwright, Java, TestNG, Maven, API Automation, CI/CD, and Page Object Model for faster regression execution and release confidence.
+                  Focus on building scalable and maintainable Automation Testing frameworks using Selenium, Cypress, Playwright, Python, Pytest, API Automation, CI/CD, and Page Object Model for faster regression execution and release confidence.
                 </p>
                 <ul className="expertise-list">
                   {automationExpertise.map((item) => (
@@ -412,6 +423,14 @@ export default function Home() {
                   ))}
                 </ul>
               </div>
+            </div>
+
+            <div className="quality-principles panel">
+              <p className="eyebrow accent">// AI IN QUALITY ENGINEERING</p>
+              <h2>Smarter Quality, Faster Feedback</h2>
+              <p>
+                AI can extend modern QA and Quality Engineering with AI-assisted test case generation, intelligent test data generation, automated test maintenance, self-healing automation tests, defect prediction, risk analysis, test result analysis, regression test optimization, and AI-assisted API and UI testing. It also supports faster root cause analysis and continuous quality monitoring while keeping human judgment at the center of quality decisions.
+              </p>
             </div>
 
             <div className="actions">
@@ -460,6 +479,7 @@ export default function Home() {
             {skillCategories.map((category) => (
               <div className="skill-category panel" key={category.title}>
                 <h3 className={`group-title ${category.tone}`}>{category.title}</h3>
+                {category.description && <p className="skill-category-description">{category.description}</p>}
                 <div className="skill-icon-grid">
                   {category.items.map((item) => (
                     <div className="skill-icon-card" key={item} data-tooltip={item}>

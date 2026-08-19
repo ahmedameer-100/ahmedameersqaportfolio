@@ -93,24 +93,6 @@ export function SkillIcon({ name }: SkillIconProps) {
           <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm-1.8 17.4h-2.4V6.6h2.4v10.8zm4.8 0h-2.4V6.6h2.4v10.8z" />
         </svg>
       );
-    case "Maven":
-      return (
-        <svg {...iconProps}>
-          <path d="M12 0L1.608 6v12L12 24l10.392-6V6L12 0zm0 2.496l7.896 4.548v9.096L12 20.688l-7.896-4.548V7.044L12 2.496zM12 6.6l-4.392 2.532v5.064L12 16.728l4.392-2.532V9.132L12 6.6z" />
-        </svg>
-      );
-    case "Gradle":
-      return (
-        <svg {...iconProps}>
-          <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm4.5 13.5h-9v-3h9v3zm0-4.5h-9v-3h9v3z" />
-        </svg>
-      );
-    case "Java":
-      return (
-        <svg {...iconProps}>
-          <path d="M8.851 18.564s-.917.534.653.714c1.902.218 2.874.187 4.969-.211 0 0 .552.346 1.321.646-4.699 2.013-10.633-.118-6.943-1.149M8.276 15.933s-1.028.761.542.924c2.032.209 3.636.227 6.413-.308 0 0 .384.389.987.602-5.679 1.661-12.007.13-7.942-1.218M13.116 11.369c1.117 1.295-.297 2.464-.297 2.464s2.858-1.472 1.543-3.314c-1.262-1.761-2.228-2.652 3.007-5.688 0-.001-8.216 2.053-4.253 6.538M19.33 20.504s.679.559-.747.991c-2.712.822-11.288 1.069-13.669.033-.856-.373.75-.89 1.254-.998.527-.114.828-.093.828-.093-.953-.671-6.156 1.317-2.643 1.887 9.58 1.553 17.462-.7 14.977-1.82M9.292 13.21s-4.362 1.036-1.544 1.412c1.189.159 3.561.123 5.77-.062 1.806-.152 3.618-.477 3.618-.477s-.637.272-1.098.587c-4.429 1.165-12.986.623-10.522-.568 2.082-1.006 3.776-.892 3.776-.892M17.116 17.584c4.503-2.34 2.421-4.589.968-4.285-.355.074-.515.138-.515.138s.132-.207.385-.297c2.875-1.011 5.086 2.981-.928 4.562 0-.001.07-.062.09-.118M14.401 0s2.494 2.494-2.365 6.33c-3.896 3.077-.888 4.832-.001 6.836-2.274-2.053-3.943-3.858-2.824-5.539 1.644-2.469 6.197-3.665 5.19-7.627M9.71 22.579c4.627 2.954 11.065 2.16 11.065 2.16s-2.045.144-4.509.617c-5.741 1.058-11.154.553-9.556-.617 1.333-.987 2.042-1.16 3.0-2.16" />
-        </svg>
-      );
     case "JavaScript":
       return (
         <svg {...iconProps}>
@@ -160,6 +142,57 @@ export function SkillIcon({ name }: SkillIconProps) {
         <svg {...iconProps} fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
           <path d="M22 12A10 10 0 1 1 12 2a10 10 0 0 1 10 10z" />
           <path d="M12 6v6l4 2" />
+        </svg>
+      );
+    case "Apache JMeter":
+      return (
+        <svg {...iconProps} fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M4 19V9m5 10V5m5 14v-7m5 7V3" />
+          <path d="M2 19h20" />
+        </svg>
+      );
+    case "k6":
+      return (
+        <svg {...iconProps} fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M5 4v16M5 12l8-8M5 12l8 8M15 12h4" />
+        </svg>
+      );
+    case "Locust":
+      return (
+        <svg {...iconProps} fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+          <circle cx="12" cy="8" r="4" />
+          <path d="M8 12l-4 8m12-8 4 8M9 16h6" />
+        </svg>
+      );
+    case "Gatling":
+      return (
+        <svg {...iconProps} fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M4 18h16M6 18l3-8 3 4 3-8 3 6" />
+        </svg>
+      );
+    case "Pytest":
+      return (
+        <svg {...iconProps} fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+          <path d="m4 12 5 5L20 6" />
+          <path d="M4 4h16M4 20h16" />
+        </svg>
+      );
+    case "Docker":
+      return (
+        <svg {...iconProps} fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M3 13h16c1.3 0 2.4-.7 3-1.8-.6-.5-1.4-.8-2.2-.8-.2-1.5-1.4-2.6-2.9-2.6-.5 0-1 .1-1.4.4C15 6.3 13.8 5 12.2 5c-1.2 0-2.3.7-2.8 1.8-.4-.2-.9-.3-1.4-.3-1.5 0-2.7 1.1-2.9 2.6C4 9.2 3 10.4 3 12v1Z" />
+          <path d="M5 16c2 2 5 3 8 3 3.5 0 6.3-1.4 8-4" />
+        </svg>
+      );
+    case "AI Assisted Testing":
+    case "Intelligent Test Data":
+    case "Defect Prediction":
+      return (
+        <svg {...iconProps} fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M9 3h6l2 3 3 2v6l-3 2-2 3H9l-2-3-3-2V8l3-2 2-3Z" />
+          <circle cx="9" cy="11" r="1" />
+          <circle cx="15" cy="11" r="1" />
+          <path d="M9 15c1.7 1.2 4.3 1.2 6 0" />
         </svg>
       );
     case "Manual Testing":

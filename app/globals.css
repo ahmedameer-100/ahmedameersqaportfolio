@@ -543,6 +543,13 @@ main {
   color: var(--green);
 }
 
+.skill-category-description {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.6;
+  margin: -4px 0 14px;
+}
+
 .skill-icon-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));

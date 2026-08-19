@@ -19,7 +19,7 @@ const quickReplies = [
 
 const botKnowledge: Record<string, string> = {
   "Core Skills":
-    "Ahmed Ameer specializes in Manual Testing (Functional, Regression, API, Database, UI/UX, UAT) and Test Automation (Selenium, Cypress, Playwright, Java, TestNG, Postman, CI/CD).",
+    "Ahmed Ameer specializes in Manual Testing (Functional, Regression, API, Database, UI/UX, UAT) and Automation Testing (Selenium, Cypress, Playwright, Python, Postman, CI/CD).",
   "Automation Experience":
     "Ahmed has 3+ years of SQA experience building maintainable automation frameworks using Selenium WebDriver, Cypress, and Playwright with Page Object Model (POM) and CI/CD integration.",
   "Featured Projects":
