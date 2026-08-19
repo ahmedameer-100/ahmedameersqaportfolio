@@ -63,6 +63,18 @@ a {
   text-decoration: none;
 }
 
+button,
+a,
+input,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 3px;
+}
+
 /* Tooltip Implementation */
 [data-tooltip] {
   position: relative;
@@ -105,11 +117,12 @@ a {
   justify-content: flex-end;
   align-items: center;
   padding: 0 36px;
-  z-index: 9;
+  z-index: 11;
   background: var(--bg);
   border-bottom: 1px solid var(--line);
   backdrop-filter: blur(12px);
   transition: background-color 0.3s ease, border-color 0.3s ease;
+  pointer-events: none;
 }
 
 .theme-toggle-btn {
@@ -125,6 +138,9 @@ a {
   cursor: pointer;
   transition: all 0.25s ease;
   box-shadow: var(--shadow-sm);
+  min-height: 40px;
+  pointer-events: auto;
+  touch-action: manipulation;
 }
 
 .theme-toggle-btn:hover {
@@ -158,6 +174,11 @@ a {
   align-items: center;
   font: 600 17px 'Hanken Grotesk', sans-serif;
   color: var(--text);
+  min-width: 0;
+}
+
+.brand > span {
+  min-width: 0;
 }
 
 .profile-avatar-wrap {
@@ -284,6 +305,7 @@ main {
   max-width: 1140px;
   padding: 96px 44px 44px;
   transition: padding 0.3s ease;
+  min-width: 0;
 }
 
 .section {
@@ -322,6 +344,16 @@ main {
   grid-template-columns: 1.25fr 0.75fr;
   gap: 44px;
   align-items: start;
+}
+
+.hero > div,
+.hero-expertise-card,
+.skill-category,
+.experience .panel,
+.project,
+.cert,
+.contact {
+  min-width: 0;
 }
 
 .hero h1 {
@@ -434,6 +466,20 @@ main {
   cursor: pointer;
   transition: all 0.25s ease;
   box-sizing: border-box;
+  touch-action: manipulation;
+}
+
+.button:active,
+.social-btn:active,
+.project-btn:active,
+.quick-reply-btn:active,
+.contact-detail button:active {
+  transform: translateY(1px);
+}
+
+button:disabled {
+  cursor: wait;
+  opacity: 0.65;
 }
 
 .button.primary {
@@ -1027,6 +1073,7 @@ main {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   position: relative;
+  touch-action: manipulation;
 }
 
 .chatbot-toggle-btn:hover {
@@ -1059,6 +1106,7 @@ main {
   box-shadow: var(--shadow-lg);
   overflow: hidden;
   animation: slideUp 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+  min-width: 0;
 }
 
 .chatbot-header {
@@ -1107,6 +1155,9 @@ main {
   font-size: 24px;
   cursor: pointer;
   padding: 0 4px;
+  min-width: 44px;
+  min-height: 44px;
+  touch-action: manipulation;
 }
 
 .chatbot-close-btn:hover {
@@ -1212,6 +1263,8 @@ main {
   cursor: pointer;
   transition: all 0.2s ease;
   flex-shrink: 0;
+  min-height: 36px;
+  touch-action: manipulation;
 }
 
 .quick-reply-btn:hover {
@@ -1254,6 +1307,9 @@ main {
   justify-content: center;
   cursor: pointer;
   transition: background 0.2s ease;
+  min-width: 44px;
+  min-height: 44px;
+  touch-action: manipulation;
 }
 
 .chatbot-input-row button:hover {
@@ -1282,6 +1338,8 @@ main {
   box-shadow: var(--shadow-lg);
   position: relative;
   animation: slideUp 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
 }
 
 .contact-modal h2 {
@@ -1302,6 +1360,9 @@ main {
   padding: 4px 8px;
   border-radius: 4px;
   transition: color 0.2s ease;
+  min-width: 44px;
+  min-height: 44px;
+  touch-action: manipulation;
 }
 
 .modal-close:hover {
@@ -1338,6 +1399,8 @@ main {
   font: 500 13px Inter, sans-serif;
   cursor: pointer;
   transition: all 0.2s ease;
+  min-height: 40px;
+  touch-action: manipulation;
 }
 
 .contact-detail button:hover {
@@ -1392,6 +1455,7 @@ footer p {
 .footer-links {
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .footer-links a:hover {
@@ -1420,8 +1484,33 @@ footer p {
   transform: translateY(0);
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .animate-on-scroll {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 /* Responsive Styles */
 @media (max-width: 1024px) {
+  main {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
   .hero {
     grid-template-columns: 1fr;
     gap: 36px;
@@ -1454,6 +1543,7 @@ footer p {
     width: 100%;
     height: auto;
     padding: 12px 20px;
+    padding-right: 88px;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
@@ -1469,6 +1559,10 @@ footer p {
   main {
     margin: 0;
     padding: 80px 24px 32px;
+  }
+
+  .hero h1 {
+    max-width: 760px;
   }
 
   .skill-grid,
@@ -1488,6 +1582,21 @@ footer p {
 }
 
 @media (max-width: 640px) {
+  .sidebar {
+    padding: 10px 18px;
+    padding-right: 76px;
+  }
+
+  .profile-avatar-wrap {
+    width: 56px;
+    height: 56px;
+  }
+
+  .brand {
+    gap: 8px;
+    font-size: 15px;
+  }
+
   main {
     padding: 72px 18px 24px;
   }
@@ -1531,6 +1640,27 @@ footer p {
 
   .contact {
     padding: 28px 20px;
+  }
+
+  .contact-detail {
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .contact-detail-info {
+    min-width: 0;
+  }
+
+  .contact-detail-info strong {
+    overflow-wrap: anywhere;
+  }
+
+  .resume-banner {
+    padding: 20px;
+  }
+
+  .resume-banner-text p {
+    line-height: 1.55;
   }
 
   .chatbot-wrapper {
