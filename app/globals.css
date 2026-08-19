@@ -200,6 +200,7 @@ textarea {
   height: 100%;
   object-fit: cover;
   object-position: center top;
+  image-rendering: auto;
   transition: transform 0.3s ease;
 }
 
@@ -390,6 +391,29 @@ main {
   grid-template-columns: 1fr 1fr;
   gap: 20px;
   margin-bottom: 24px;
+}
+
+.quality-principles {
+  padding: 24px 28px;
+  margin: 24px 0;
+}
+
+.quality-principles h2 {
+  font: 600 25px / 1.2 'Hanken Grotesk', sans-serif;
+  color: var(--text);
+  margin: 0 0 14px;
+}
+
+.quality-principles p:not(.eyebrow) {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.75;
+  margin: 0 0 14px;
+  max-width: 900px;
+}
+
+.quality-principles p:last-child {
+  margin-bottom: 0;
 }
 
 .hero-expertise-card {
@@ -1603,6 +1627,21 @@ footer p {
 
   .hero h1 {
     font-size: 36px;
+  }
+
+  .quality-principles {
+    padding: 20px 18px;
+    margin: 20px 0;
+  }
+
+  .quality-principles h2 {
+    font-size: 22px;
+    line-height: 1.25;
+  }
+
+  .quality-principles p:not(.eyebrow) {
+    font-size: 13px;
+    line-height: 1.7;
   }
 
   .hero-expertise {

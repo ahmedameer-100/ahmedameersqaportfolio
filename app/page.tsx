@@ -320,6 +320,8 @@ export default function Home() {
               alt="Ahmed Ameer — SQA Engineer"
               width={52}
               height={52}
+              quality={75}
+              sizes="(max-width: 640px) 56px, 72px"
               priority
             />
           </div>
@@ -382,10 +384,10 @@ export default function Home() {
               <p className="eyebrow accent">// SDLC + STLC</p>
               <h2>Quality Engineering Across the Delivery Lifecycle</h2>
               <p>
-                SDLC defines how software moves from requirements and planning to development, testing, deployment, and maintenance. STLC provides the testing activities within that journey: requirement analysis, test planning, test design, environment preparation, execution, defect resolution, reporting, and closure. Together, they make quality a shared responsibility from the first requirement through production feedback and continuous improvement.
+                In my QA work, I apply the SDLC and STLC together by turning requirements into practical test coverage before development begins. I analyze requirements, plan tests, design cases, and validate web applications across CRM and HRMS workflows through manual functional, regression, smoke, and integration testing. I test APIs with Postman and Swagger, identify and reproduce bugs, report and track them with project teams, and verify fixes with developers throughout each release cycle.
               </p>
               <p>
-                Quality Engineering prevents defects early through risk-based planning, automation, observability, and continuous validation. By integrating testing into every SDLC stage, teams gain faster feedback, stronger release confidence, and more reliable software.
+                This approach keeps quality involved from requirement analysis and development through deployment and maintenance. I use GitHub project boards and issue tracking to keep work visible, collaborate on risk and release readiness, and provide clear validation feedback as features move from planning to production.
               </p>
             </div>
 
@@ -429,7 +431,10 @@ export default function Home() {
               <p className="eyebrow accent">// AI IN QUALITY ENGINEERING</p>
               <h2>Smarter Quality, Faster Feedback</h2>
               <p>
-                AI can extend modern QA and Quality Engineering with AI-assisted test case generation, intelligent test data generation, automated test maintenance, self-healing automation tests, defect prediction, risk analysis, test result analysis, regression test optimization, and AI-assisted API and UI testing. It also supports faster root cause analysis and continuous quality monitoring while keeping human judgment at the center of quality decisions.
+                I see AI as a practical extension of the QA workflow I already use across manual and automation testing. It can help generate and improve test cases, analyze scenarios and potential edge cases, prepare test data, support API testing, and summarize bug patterns or reproduction evidence. Used alongside Playwright and JavaScript-based automation, AI can also reduce repetitive framework maintenance, improve coverage, and make regression execution and feedback faster.
+              </p>
+              <p>
+                Connected with CI/CD and GitHub Actions, these tools can help prioritize regression checks, analyze test results, and surface risks earlier. Human validation remains essential: I use AI to accelerate investigation and test design while keeping QA judgment, defect verification, and release decisions grounded in the application and its requirements.
               </p>
             </div>
 
